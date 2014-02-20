@@ -34,7 +34,7 @@ a:hover{
 }
 
 a img{
-	border: none; /*IE用 IEはデフォルトでリンク画像に枠線ついているため*/
+	border: none; /*IE用 IEはデフォルトでリンク画像に枠線あり*/
 }
 
 /*CSSハック*/
