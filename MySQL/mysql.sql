@@ -18,7 +18,7 @@ mysql -u root -p
 create database blog_app;
 
 
--- データベースごとの作業ユーザー(ユーザー名)とパスワード設定
+-- データベースごとの作業ユーザー(ユーザー名→「dbuser」にする場合)とパスワード設定
 grant all on blog_app.* to dbuser@localhost identified by 'パスワード';
 
 
