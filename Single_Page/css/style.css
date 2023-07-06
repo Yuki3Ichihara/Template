@@ -1,0 +1,396 @@
+/*
+ * Theme Name: Responsive Web Design Single Page Template
+ * Theme URI: /
+ * Description: Responsive Web Design Single Page Template
+ * Author: Rhapsody Create
+ * Author URI: 
+ * Version:1.0
+ * */
+
+@charset "utf-8";
+
+/*共通の設定*/
+
+/*cssリセット*/
+html, body, div, span, applet, object, iframe, strong,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, legend, caption, 
+tbody, tfoot, thead, table, label, tr, th, td{
+  margin: 0;
+  padding: 0; border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  list-style:none;
+  font-style:normal;
+  font-weight:normal;
+}
+
+body{
+    font-family:"メイリオ","Meiryo",verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+}
+
+a img{
+  border: none; /*IE用 IEはデフォルトでリンク画像に枠線あり*/
+}
+
+p{
+  margin-bottom: 0.5em;
+  line-height: 1.5em;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.glay_layer{
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.5;
+}
+
+#pagetop{
+  position: fixed;
+  z-index: 5;
+  right: 25px;
+  bottom: 15px;
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+
+#pagetop:hover{
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/*header*/
+header{
+  padding: 20px 0;
+  overflow: hidden;
+  background: #e6e6fa;
+}
+
+header h1{
+  font-size: 120%;
+}
+
+#header-wrap{
+  position: relative;
+}
+
+.menu-button{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.humbarger,
+.humbarger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.humbarger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.humbarger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 3px;
+}
+.humbarger span:nth-of-type(1) {
+  top: 0;
+}
+.humbarger span:nth-of-type(2) {
+  top: 10px;
+}
+.humbarger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.humbarger-on span:nth-of-type(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+  background-color: #fff;
+}
+.humbarger-on span:nth-of-type(2) {
+  opacity: 0;
+}
+.humbarger-on span:nth-of-type(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+  background-color: #fff;
+}
+
+.header-menu{
+  display: none;
+}
+
+.header-menu-open{
+  display: block;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+}
+
+.header-menu-open li{
+  background: url('../img/arrow.png') no-repeat 8px 16px;
+  padding: 10px 0;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.header-menu-open li:first-child{
+  margin-top: 10px;
+}
+
+.header-menu-open > li > a{
+  text-decoration: none;
+  color: #333;
+}
+
+.header-menu-open > li > a:hover{
+    border-bottom: 1px solid #333;
+  }
+
+section{
+  padding: 60px 0;
+  background: #fffaf0;
+}
+
+section h2{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+section:nth-child(even){
+  background: #fff;
+}
+
+/*features*/
+.features img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.features .item{
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.features .item:last-child{
+  margin-bottom: 0;
+}
+
+/*news*/
+.news .item{
+  text-align: center;
+}
+
+.news .item img{
+  margin-bottom: 10px;
+}
+
+.news p{
+  text-align: left;
+}
+
+.news .item{
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.news .item:last-child{
+  margin-bottom: 0;
+}
+
+/*how-to-use*/
+.how-to-use iframe{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*iframeはそのまま埋め込んでも縦横比がうまく反映されないため、親要素を作成する必要あり*/
+/*cssでpadding-topまたはpadding-bottomを%で指定するとwidthに対する比率になる仕様*/
+/*16:9のコンテンツを縦横比を保ったまま貼り付けたい場合*/
+.iframe-wrapper{
+  padding-bottom: 56.25%;/* 9/16=56.25 */
+  height: 0;
+  position: relative;
+}
+
+/*contact*/
+.contact_description{
+  margin-bottom: 30px;
+}
+
+.contact_description span{
+  color: #ff00ff;
+}
+
+#contact form{
+  width: 70%;
+  margin: 0 auto;
+}
+
+#contact form dd{
+  margin-bottom: 20px;
+}
+
+/*footer*/
+footer{
+  text-align: center;
+  padding: 60px 0;
+  background: #e6e6fa;
+}
+
+
+/*中サイズデバイス*/
+@media all and (min-width: 570px){
+
+  /*features*/
+  .features p{
+    width: 45%;
+  }
+
+  .features img{
+    width: 50%;
+  }
+
+  .pull-right{
+    float: right;
+    padding-left: 5%;
+  }
+
+  .pull-left{
+    float: left;
+    padding-right: 5%;
+  }
+
+  .features .item{
+    overflow: hidden;
+  }
+
+  /*news*/
+  
+  /*子要素.news .itemのmargin-bottom: 40px;分を親要素の余白からマイナスする*/
+  .news .container{
+    margin-bottom: -40px;
+  }
+
+  .news .item{
+    width: 30%;
+  }
+
+  .news .item img{
+    width: 100%;
+  }
+
+  /*floatで対応する場合*/
+  .news .container{
+    overflow: hidden;
+  }
+
+  .news .container .item{
+    float: left;
+    margin-right: 5%;
+  }
+
+  .news .container .item:nth-of-type(3n){
+    margin-right: 0;
+  }
+
+  /*flexboxでレイアウトする場合*/
+  /*flexboxでレイアウト困難なパターン(4カラム以上など)であれば従来通り、floatで対応する方が良い*/
+  /*.news .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }*/
+
+  /*空のflexアイテムを生成しておくことで可変でも左寄せに表示(3カラムの場合)*/
+  /*.news .container::after{
+    content:"";
+    display: block;
+    width:30%;
+  }*/
+
+  /*contact*/
+  #contact form{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  #contact form dd input,textarea{
+    width: 100%;
+  }
+
+}
+
+
+/*大サイズデバイス*/
+@media all and (min-width: 820px){
+
+  .container{
+    width: 820px;
+  }
+
+  .menu-button{
+    display: none;
+  }
+
+  .header-menu{
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .header-menu > li{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+  }
+
+  .header-menu > li > a{
+    text-decoration: none;
+    color: #333;
+  }
+
+  .header-menu > li > a:hover{
+    border-bottom: 1px solid #333;
+  }
+
+}
