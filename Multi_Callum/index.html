@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- OGP -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="fb:app_id" content="">
+	<meta property="fb:admins" content="">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="">
+
+    <!-- Favicon -->
+    <link href="/img/favicon.ico" rel="shortcut_icon">
+	
+	<title>レスポンシブWebデザイン</title>
+  	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <!--最新のjQueryで動かない命令やプラグインがあるときは古い安定したバージョンを使用する
+  <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+  -->
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/drawer-menu.js"></script>
+  <script type="text/javascript" src="js/page_scroll.js"></script>
+  <script type="text/javascript" src="js/responsive_layout.js"></script>
+
+	<!-- floatさせた要素(height未指定)の高さを揃えたい時に使用する、
+	floatさせる要素のheightを指定する場合は不要 -->
+  <!-- 
+	 <script type="text/javascript" src="js/jquery.flatheights.js"></script>
+   -->
+
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <header>
+      <div id="header-wrap" class="container">
+        <h1>RWD&nbsp;Multi&nbsp;Callum&nbsp;ver</h1>
+        <div class="menu-button">
+        	<div class="humbarger">
+	        	<span></span>
+				<span></span>
+				<span></span>
+	        </div>
+        </div>
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about/index.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <form class="search-box">
+	      	<input type="text" class="search-text" placeholder="キーワードで探す">
+	      	<button type="submit">検索</button>
+        </form>
+      </div><!-- #header-wrap -->
+    </header>
+
+	<div id="content-wrapp">
+
+		<div class="side-bar">
+			<h2 class="category-head">カテゴリー</h2>
+			<div class="container">
+				<nav class="side-nav">
+				<ul class="side-menu">
+				<li class="category"><a href="#">トップス</a>
+					<ul class="category-detail-menu">
+						<li><a href="#">Tシャツ</a></li>
+						<li><a href="#">シャツ</a></li>
+						<li><a href="#">ニット</a></li>
+					</ul>
+				</li>
+				<li class="category"><a href="#">ボトムス</a>
+					<ul class="category-detail-menu">
+						<li><a href="#">ジーンズ</a></li>
+						<li><a href="#">スラックス</a></li>
+						<li><a href="#">チノパン</a></li>
+					</ul>
+				</li>
+				<li class="category"><a href="#">アウター</a>
+								<ul class="category-detail-menu">
+						<li><a href="#">チェスターコート</a></li>
+						<li><a href="#">ステンカラーコート</a></li>
+						<li><a href="#">ダウンジャケット</a></li>
+					</ul>
+				</li>
+				</ul>
+			</nav>
+			</div><!--.container-->
+		</div><!-- .side-bar -->
+
+		<div id="main-content">
+	    	<section class="product">
+		      <h2>Product</h2>
+		      <div class="container">
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		        <div class="item">
+		          <img src="img/wood.jpg" alt="">
+		          <p>hello. hello. hello. </p>
+		        </div>
+		      </div><!--.container-->
+	    	</section>
+
+		    <!-- iframeで動画を埋め込みたい場合 -->
+		    <section class="how-to-use">
+		      <h2>How to use</h2>
+		      <div class="container">
+		        <div class="iframe-wrapper">
+		          <iframe src="https://www.youtube.com/embed/qQNuF4Umuss?ecver=2" frameborder="0" allowfullscreen></iframe>
+		        </div>
+		      </div><!--.container-->
+		    </section>
+
+		    <section id="contact">
+		    	<h2>Contact</h2>
+		    	<div class="container">
+		    		<div class="contact_description">
+						<p>お仕事のご依頼・お見積もり・ご相談など、お気軽にお問い合わせフォームよりご連絡下さい。</p>
+						<p><span>※</span>全て入力必須項目です。</p>
+					</div>
+						<form action="" method="post">
+							<dl>
+								<dt>お名前</dt>
+								<dd><input type="text" class="validate required" name="name" id="name" size="40"></dd>
+								
+								<dt>メールアドレス</dt>
+								<dd><input type="text" class="validate required mail" name="mail" id="mail" size="40"></dd>
+
+								<dt>メールアドレス&nbsp;(確認用)</dt>
+								<dd><input type="text" class="validate required mail mail_check" name="mail_check" id="mail_check" size="40"></dd>
+								
+								<dt>お問い合わせ内容</dt>
+								<dd>
+									<textarea class="validate required" name="comment" id="comment" rows="15" cols="40"></textarea>
+								</dd>
+								
+								<!-- PHPでフォームのプログラム作ったときに必要 -->
+								<!-- <input type="hidden" id="token" name="token" value="<?php echo h($_SESSION['token']); ?>"> -->
+
+								<p><input type="submit" id="submit" value="送信" name="submit"></p>
+								
+							</dl>
+						</form>
+		    	</div><!--.container-->
+		    </section>
+	    </div><!-- #main-content -->
+
+	    <div id="sub-content">
+	    	<h2>サブ</h2>
+	    	<div class="container">
+	    		<aside>
+	    			<p>SNS</p>
+	    			<p>広告</p>
+	    		</aside>
+	    	</div><!--.container-->
+	    </div><!-- #sub-content -->
+		</div><!-- #content-wrapp -->
+
+    <footer>
+      <p>レスポンシブWebデザイン&nbsp;Multi&nbsp;Callum&nbsp;ver_Template.</p>
+    </footer>
+
+    <div class="glay_layer"></div>
+
+  </div><!--#wrapper-->
+
+  <!-- トップへ戻るボタン -->
+  <p id="pagetop"><a href="#"><img src="img/to_top.png" alt="ページトップへ"></a></p>
+  
+  <!-- floatさせた要素(height未指定)の高さを揃える -->
+  <!-- floatさせる要素のheightを指定する場合は不要 -->
+	<!-- 
+		<script type="text/javascript">
+			(function ($) {
+				$(window).on('load resize', function(){
+					if($(window).width() >= 570){
+						$('.news .item').flatHeights();
+					}
+				});
+			})(jQuery);
+		</script>
+	-->
+
+</body>
+</html>
