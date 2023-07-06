@@ -367,19 +367,6 @@ footer{
     width: 100%;
   }
 
-  /*floatで対応する場合*/
-  .product .container{
-    overflow: hidden;
-  }
-
-  .product .container .item{
-    margin-right: 0.5%;
-  }
-
-  .product .container .item:nth-of-type(3n){
-    margin-right: 0;
-  }
-
   /*flexboxでレイアウト*/
   .product .container{
     display: flex;
@@ -390,6 +377,11 @@ footer{
     margin-right: 0.5%;
   }
 
+  .product .container .item:nth-of-type(3n){
+    margin-right: 0;
+    
+  }
+  
   /*contact*/
   #contact form{
     margin: 0 auto;
