@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale= 1.0">
+<title>レスポンシブWebデザイン</title>
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <!--最新のjQueryで動かない命令やプラグインがあるときは古い安定したバージョンを使用する
+  <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+  -->
+  <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="../js/drawer-menu.js"></script>
+  <script type="text/javascript" src="../js/page_scroll.js"></script>
+  <script type="text/javascript" src="../js/responsive_layout.js"></script>
+
+	<!-- floatさせた要素(height未指定)の高さを揃えたい時に使用する、
+	floatさせる要素のheightを指定する場合は不要 -->
+  <!-- 
+	 <script type="text/javascript" src="js/jquery.flatheights.js"></script>
+   -->
+
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <header>
+      <div id="header-wrap" class="container">
+        <h1>RWD&nbsp;Multi&nbsp;Callum&nbsp;ver</h1>
+        <div class="menu-button">
+        	<div class="humbarger">
+	        	<span></span>
+					  <span></span>
+					  <span></span>
+	        </div>
+        </div>
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li>About</li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <form class="search-box">
+	      	<input type="text" class="search-text" placeholder="キーワードで探す">
+	      	<button type="submit">検索</button>
+        </form>
+      </div><!-- #header-wrap -->
+    </header>
+
+		<div id="content-wrapp">
+
+			<div id="lower-page-main-content">
+
+		    <!-- iframeで動画を埋め込みたい場合 -->
+		    <section class="how-to-use">
+		      <h2>About</h2>
+		      <div class="container">
+		        <div class="iframe-wrapper">
+		          <iframe src="https://www.youtube.com/embed/qQNuF4Umuss?ecver=2" frameborder="0" allowfullscreen></iframe>
+		        </div>
+		      </div><!--.container-->
+		    </section>
+
+		    <section id="contact">
+		    	<h2>Contact</h2>
+		    	<div class="container">
+		    		<div class="contact_description">
+							<p>お仕事のご依頼・お見積もり・ご相談など、お気軽にお問い合わせフォームよりご連絡下さい。</p>
+							<p><span>※</span>全て入力必須項目です。</p>
+						</div>
+						<form action="" method="post">
+							<dl>
+								<dt>お名前</dt>
+								<dd><input type="text" class="validate required" name="name" id="name" size="40"></dd>
+								
+								<dt>メールアドレス</dt>
+								<dd><input type="text" class="validate required mail" name="mail" id="mail" size="40"></dd>
+
+								<dt>メールアドレス&nbsp;(確認用)</dt>
+								<dd><input type="text" class="validate required mail mail_check" name="mail_check" id="mail_check" size="40"></dd>
+								
+								<dt>お問い合わせ内容</dt>
+								<dd>
+									<textarea class="validate required" name="comment" id="comment" rows="15" cols="40"></textarea>
+								</dd>
+								
+								<!-- PHPでフォームのプログラム作ったときに必要 -->
+								<!-- <input type="hidden" id="token" name="token" value="<?php echo h($_SESSION['token']); ?>"> -->
+
+								<p><input type="submit" id="submit" value="送信" name="submit"></p>
+								
+							</dl>
+						</form>
+		    	</div><!--.container-->
+		    </section>
+	    </div><!-- #main-content -->
+
+	    <div id="sub-content">
+	    	<h2>サブ</h2>
+	    	<div class="container">
+	    		<aside>
+	    			<p>SNS</p>
+	    			<p>広告</p>
+	    		</aside>
+	    	</div><!--.container-->
+	    </div><!-- #sub-content -->
+		</div><!-- #content-wrapp -->
+
+    <footer>
+      <p>レスポンシブWebデザイン&nbsp;Multi&nbsp;Callum&nbsp;ver_Template.</p>
+    </footer>
+
+    <div class="glay_layer"></div>
+
+  </div><!--#wrapper-->
+
+  <!-- トップへ戻るボタン -->
+  <p id="pagetop"><a href="#"><img src="img/to_top.png" alt="ページトップへ"></a></p>
+
+</body>
+</html>
